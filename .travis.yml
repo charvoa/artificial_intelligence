@@ -9,14 +9,6 @@ before_script:
   - sudo apt-get install -y make
   - sudo apt-get install -y g++-4.8
   - export CXX="g++-4.8"
-  - wget http://sfml-dev.org/download/sfml/2.1/SFML-2.1-linux-gcc-64bits.tar.bz2 -O /tmp/sfml.tar.bz2
-  - tar -xjvf /tmp/sfml.tar.bz2
-  - sudo cp -r SFML-2.1/* /usr/
-  - sudo apt-get install -y libjpeg62-dev libsndfile1-dev libglew1.5 libglew1.5-dev libfreetype6 libjpeg-turbo8 libjpeg8 libopenal-data libopenal1  libxrandr2 libxrender1 libsoil1
 notifications:
   email: false
-  on_success: always
-  slack:
-    rooms:
-      - pintade:pwNqkJawHhR2pEm1vWg4UWjz#r-type
-script: bash install.sh
+script: bash config.sh
